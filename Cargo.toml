@@ -1,0 +1,19 @@
+[package]
+name = "femcorp_time_tracker"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+uuid = "1.19.0"
+futures = "0.3.31"
+ferrisbox = { git = "https://github.com/ReconnectedCC/FerrisBox.git" }
+tokio = { version = "1.49.0", features = ["signal"] }
+sqlx = { version = "0.8.6", features = ["postgres", "uuid", "chrono", "runtime-tokio"] }
+dotenvy = "0.15.7"
+tracing-subscriber = "0.3.22"
+chrono = "0.4.43"
+tracing = "0.1.44"
+serde = { version = "1.0.228", features = ["derive"] }
+reqwest = { version = "0.13.1", features = ["json"] }
+duration-string = "0.5.3"
+discord-webhook2 = "0.4.3"
