@@ -6,4 +6,5 @@ RUN cargo build --release
 FROM ubuntu:latest
 COPY --from=build /usr/src/storage/target/release/chatbox-timeclock /usr/local/bin/chatbox-timeclock
 WORKDIR /chatbox-timeclock
+RUN apt-get update && apt-get install -y pkg-config openssl libssl-dev && rm -rf /var/lib/apt/lists/*
 CMD ["/usr/local/bin/chatbox-timeclock"]
